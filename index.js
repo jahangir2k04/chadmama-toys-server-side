@@ -43,6 +43,11 @@ async function run() {
       res.send(result);
     })
 
+    app.get('/all-toys', async(req, res) => {
+      const result = await toys.find().toArray();
+      res.send(result);
+    })
+
     app.get('/category', async (req, res) => {
       let query = {};
       if (req.query?.name) {
