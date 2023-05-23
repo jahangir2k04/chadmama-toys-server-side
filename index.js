@@ -36,6 +36,18 @@ async function run() {
       res.send(result);
     });
 
+    app.get('/category', async(req, res) => {
+      let query = {};
+      if(req.query?.name){
+        query = {subCategory: req.query?.name}
+      }
+      const options = {
+        projection : {name: 1, photo: 1, price: 1, rating: 1}
+      }
+      const result = await toys.find(query, options).toArray();
+      res.send(result);
+    })
+
     app.post('/toys', async(req, res) => {
       const newToy = req.body;
       const result = await toys.insertOne(newToy);
