@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.wx1xaqv.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -25,32 +25,42 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await 
+    client.connect();
 
 
     const gallery = client.db('chadmamatoysDB').collection('gallery');
     const toys = client.db('chadmamatoysDB').collection('toys');
 
-    app.get('/gallery', async(req, res) => {
+    app.get('/gallery', async (req, res) => {
       const result = await gallery.find().toArray();
       res.send(result);
     });
 
-    app.get('/category', async(req, res) => {
+    app.post('/toys', async (req, res) => {
+      const newToy = req.body;
+      const result = await toys.insertOne(newToy);
+      res.send(result);
+    })
+
+    app.get('/category', async (req, res) => {
       let query = {};
-      if(req.query?.name){
-        query = {subCategory: req.query?.name}
+      if (req.query?.name) {
+        query = { subCategory: req.query?.name }
       }
       const options = {
-        projection : {name: 1, photo: 1, price: 1, rating: 1}
+        projection: { name: 1, photo: 1, price: 1, rating: 1 }
       }
       const result = await toys.find(query, options).toArray();
       res.send(result);
     })
 
-    app.post('/toys', async(req, res) => {
-      const newToy = req.body;
-      const result = await toys.insertOne(newToy);
+    app.get('/toy/:id', async (req, res) => {
+      const id = req.params.id;
+      console.log(id);
+      const query = { _id: new ObjectId(id) };
+      const result = await toys.findOne(query);
+      console.log(result);
       res.send(result);
     })
 
@@ -69,9 +79,9 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Chadmama Toys is running');
+  res.send('Chadmama Toys is running');
 })
 
 app.listen(port, () => {
-    console.log(`Chadmama Toys is running on port : ${port}`);
+  console.log(`Chadmama Toys is running on port : ${port}`);
 })
