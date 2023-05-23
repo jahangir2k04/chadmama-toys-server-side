@@ -29,9 +29,16 @@ async function run() {
 
 
     const gallery = client.db('chadmamatoysDB').collection('gallery');
+    const toys = client.db('chadmamatoysDB').collection('toys');
 
     app.get('/gallery', async(req, res) => {
       const result = await gallery.find().toArray();
+      res.send(result);
+    });
+
+    app.post('/toys', async(req, res) => {
+      const newToy = req.body;
+      const result = await toys.insertOne(newToy);
       res.send(result);
     })
 

@@ -1,38 +1,50 @@
 [
     {
+      "name": "Teddy Bear",
       "img": "https://images.unsplash.com/photo-1543886151-3bc2b944c718?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVkZHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
+      "name": "Teddy Bear",
       "img": "https://media.istockphoto.com/id/909772478/photo/brown-teddy-bear-isolated-in-front-of-a-white-background.jpg?b=1&s=170667a&w=0&k=20&c=EFB5Zht19_lCbcv5e7a1lh_c-3LgswUrXogfEEBq_ZY="
     },
     {
+      "name": "Horse",
       "img": "https://images.unsplash.com/photo-1513169436412-a6a2f2e3a7ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9yc2UlMjB0b3l8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
+      "name": "Horse",
       "img": "https://media.istockphoto.com/id/1423560968/photo/traditional-wooden-painted-toy-rocking-horse-antique-isolated-on-black-background.jpg?s=612x612&w=0&k=20&c=Mophi9xojzJoLSGPKFkn_Br5rkAfFtN4byddVLBY-YM="
     },
     {
+      "name": "Dinosaur",
       "img": "https://media.istockphoto.com/id/157393605/photo/toy-stegosaurus-dinosaur-colorful-white-background-extinct-species.jpg?s=612x612&w=0&k=20&c=rG2iLgbDAMNW3SGc577Y2hrf1WHRQZ_FLeQJB_yegtw="
     },
     {
+      "name": "Dinosaur",
       "img": "https://images.unsplash.com/photo-1603589138334-be34651248b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZGlub3NhdXIlMjB0b3l8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
-      "img": "https://media.istockphoto.com/id/155280619/photo/spoiled-yorkiepoo-puppy-sitting-in-bed-of-toys.jpg?s=612x612&w=0&k=20&c=C5LPRqIgpPUcYC20lUArgksliaxIAJVstGYpNo8oY1U="
+      "name": "Dogs",
+      "img": "https://media.istockphoto.com/id/1008981422/photo/french-bulldog-puppy-playing-with-dog-toy.jpg?s=612x612&w=0&k=20&c=TG2bUyxE_-wRsG_mNjn3uCaA57s0eSDk_qV_rDfIUOc="
     },
     {
+      "name": "Dogs",
       "img": "https://plus.unsplash.com/premium_photo-1663099715260-7fa014f65d4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZG9ncyUyMHRveXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
+      "name": "Cat",
       "img": "https://images.unsplash.com/photo-1609533440656-68c27fc2862d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNhdCUyMHRveXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
+      "name": "Cat",
       "img": "https://images.unsplash.com/photo-1619043544743-b72f69e2a077?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2F0JTIwdG95fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
     },
     {
+      "name": "Unicorn",
       "img": "https://images.unsplash.com/photo-1590441251936-6273e387aa52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dW5pY29ybiUyMHRveXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
     },
     {
+      "name": "Unicorn",
       "img": "https://media.istockphoto.com/id/1314268502/photo/unicorn-plush-toy-sitting-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=mqm2NuaUlJXneKVp_C7W8AAAUe5x3vMYUVqkWoSCQh8="
     }
   ]
