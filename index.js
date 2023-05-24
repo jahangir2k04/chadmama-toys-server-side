@@ -44,10 +44,12 @@ async function run() {
     })
 
     app.get('/all-toys', async (req, res) => {
+      const search = req.query.search;
+      const query = { name: { $regex: search, $options: "i" } }
       const page = parseInt(req.query.page) || 0;
       const limit = parseInt(req.query.limit) || 20;
       const skip = page * limit;
-      const result = await toys.find().skip(skip).limit(limit).toArray();
+      const result = await toys.find(query).skip(skip).limit(limit).toArray();
       res.send(result);
     })
 
@@ -71,12 +73,19 @@ async function run() {
     })
 
     app.get('/my-toys', async (req, res) => {
+      const sort = req.query.sort;
       let query = {};
       if (req.query?.email) {
         query = { sellerEmail: req.query?.email }
       }
 
-      const result = await toys.find(query).toArray();
+      let result = await toys.find(query).toArray();
+      if (sort === 'ascending') {
+        result = await toys.find(query).sort({ "price": 1 }).toArray();
+      }
+      if (sort === 'descending') {
+        result = await toys.find(query).sort({ "price": -1 }).toArray();
+      }
       res.send(result);
     })
 
