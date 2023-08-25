@@ -1,5 +1,5 @@
 ﻿# Chadmama Toys
- * **Used packages/technology:
+ * **Used packages/technology:**
    * Express
    * MongoDB
    * Cors
